@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import TodoItem from "./TodoItem/TodoItem";
 import { v4 as uuidv4 } from "uuid";
+import TodoForm from "./TodoForm/TodoForm";
 
 const Todolist = () => {
   const [todos, setTodos] = useState([
@@ -21,6 +22,18 @@ const Todolist = () => {
     setTodos(updatedTodos);
   };
 
+  const addTodo = (name) => {
+    if (name.trim() === "") return;
+
+    const newTodo = {
+      id: uuidv4(),
+      name: name,
+      isDone: false,
+    };
+
+    setTodos([...todos, newTodo]);
+  };
+
   const displayTodos = () => {
     return todos.map((todo) => (
       <TodoItem
@@ -36,6 +49,7 @@ const Todolist = () => {
 
   return (
     <React.Fragment>
+      <TodoForm addTodo={addTodo}></TodoForm>
       <h1>Todolist</h1>
       <div>{displayTodos()}</div>
     </React.Fragment>
