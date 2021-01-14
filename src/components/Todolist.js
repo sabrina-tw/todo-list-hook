@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Todo from "./Todo";
+import TodoItem from "./TodoItem/TodoItem";
 
 const Todolist = () => {
   const [todos] = useState([
@@ -8,7 +8,9 @@ const Todolist = () => {
   ]);
 
   const displayTodos = () => {
-    return todos.map((todo) => <Todo name={todo.name} isDone={todo.isDone} />);
+    return todos.map((todo) => (
+      <TodoItem name={todo.name} isDone={todo.isDone} />
+    ));
   };
 
   return (
