@@ -1,3 +1,9 @@
+# React todo list (hooks)
+
+This React repo implements a todo list using React hooks with function components.
+
+See notes for implementation with class components: https://thoughtworks-sea.github.io/sgunited-guides/#/frontend/react-todo-list
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
