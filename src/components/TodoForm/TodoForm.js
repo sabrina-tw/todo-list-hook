@@ -7,10 +7,15 @@ const TodoForm = ({ addTodo }) => {
     setName(e.target.value);
   };
 
+  const handleAdd = () => {
+    addTodo(name);
+    setName("");
+  };
+
   return (
     <React.Fragment>
       <input type="type" value={name} onChange={handleChange}></input>
-      <button onClick={() => addTodo(name)}>Add</button>
+      <button onClick={handleAdd}>Add</button>
     </React.Fragment>
   );
 };
