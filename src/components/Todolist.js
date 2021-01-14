@@ -16,6 +16,11 @@ const Todolist = () => {
     setTodos(updatedTodos);
   };
 
+  const deleteTodo = (id) => {
+    const updatedTodos = todos.filter((todo) => todo.id !== id);
+    setTodos(updatedTodos);
+  };
+
   const displayTodos = () => {
     return todos.map((todo) => (
       <TodoItem
@@ -24,6 +29,7 @@ const Todolist = () => {
         key={todo.id}
         id={todo.id}
         toggleDone={toggleDone}
+        deleteTodo={deleteTodo}
       />
     ));
   };
