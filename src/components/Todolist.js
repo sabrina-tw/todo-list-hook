@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Todo from "./Todo";
 
 const Todolist = () => {
   const [todos] = useState([
@@ -7,19 +8,14 @@ const Todolist = () => {
   ]);
 
   const displayTodos = () => {
-    return todos.map((todo) => (
-      <div>
-        <span>{todo.name}</span>
-        <span>{todo.isDone ? " - completed" : ""}</span>
-      </div>
-    ));
+    return todos.map((todo) => <Todo name={todo.name} isDone={todo.isDone} />);
   };
 
   return (
-    <div>
+    <React.Fragment>
       <h1>Todolist</h1>
       <div>{displayTodos()}</div>
-    </div>
+    </React.Fragment>
   );
 };
 
