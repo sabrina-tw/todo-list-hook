@@ -1,5 +1,7 @@
 # React todo list (hooks)
 
+![todo list](./public/todolist.png)
+
 This React repo implements a todo list using React hooks with function components.
 
 See notes for implementation with class components: https://thoughtworks-sea.github.io/sgunited-guides/#/frontend/react-todo-list
