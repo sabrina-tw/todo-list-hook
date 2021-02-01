@@ -14,7 +14,12 @@ const TodoForm = ({ addTodo }) => {
 
   return (
     <React.Fragment>
-      <input type="type" value={name} onChange={handleChange}></input>
+      <input
+        aria-label="todo-composer"
+        type="type"
+        value={name}
+        onChange={handleChange}
+      ></input>
       <button onClick={handleAdd}>Add</button>
     </React.Fragment>
   );
