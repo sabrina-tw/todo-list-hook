@@ -20,7 +20,7 @@ describe("TodoForm", () => {
     expect(inputBox.value).toEqual(newTodoValue);
   });
 
-  it("should clear input box upon clicking Add", () => {
+  it("should call addTodo and clear input box upon clicking Add", () => {
     const addTodo = jest.fn();
     render(<TodoForm addTodo={addTodo} />);
     const inputBox = screen.getByLabelText("todo-composer");
