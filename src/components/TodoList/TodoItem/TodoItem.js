@@ -9,7 +9,9 @@ const TodoItem = ({ name, isDone, id, toggleDone, deleteTodo }) => {
         {!isDone && <RadioButtonUnchecked />}
         {isDone && <CheckCircle />}
       </span>
-      <span className="todo-item__name">{name}</span>
+      <span className={`todo-item__name ${isDone ? "completed" : ""}`}>
+        {name}
+      </span>
       <Clear className="todo-item__delete" onClick={() => deleteTodo(id)} />
     </div>
   );

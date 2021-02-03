@@ -17,6 +17,10 @@
   margin-left: 5px;
 }
 
+.todo-item__name.completed {
+  text-decoration: line-through;
+}
+
 .todo-item__delete {
   color: red;
   display: flex;
