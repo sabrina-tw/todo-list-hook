@@ -3,7 +3,7 @@ import TodoItem from "./TodoItem/TodoItem";
 import { v4 as uuidv4 } from "uuid";
 import TodoForm from "./TodoForm/TodoForm";
 
-const TodoList = () => {
+const TodoList = ({ title }) => {
   const [todos, setTodos] = useState([
     { id: uuidv4(), name: "buy milk", isDone: false },
     { id: uuidv4(), name: "do push ups", isDone: true },
@@ -49,8 +49,8 @@ const TodoList = () => {
 
   return (
     <React.Fragment>
+      <h1>{title}</h1>
       <TodoForm addTodo={addTodo}></TodoForm>
-      <h1>TodoList</h1>
       <div>{displayTodos()}</div>
     </React.Fragment>
   );
