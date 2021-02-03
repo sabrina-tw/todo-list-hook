@@ -19,9 +19,7 @@
 
 .todo-item__delete {
   color: red;
-  font-weight: bold;
-  font-size: 1.4rem;
-  margin-left: 8px;
+  display: flex;
 }
 
 .todo-item__delete:hover {

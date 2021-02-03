@@ -1,4 +1,4 @@
-import { CheckCircle, RadioButtonUnchecked } from "@material-ui/icons";
+import { CheckCircle, Clear, RadioButtonUnchecked } from "@material-ui/icons";
 import React from "react";
 import "./TodoItem.css";
 
@@ -10,9 +10,7 @@ const TodoItem = ({ name, isDone, id, toggleDone, deleteTodo }) => {
         {isDone && <CheckCircle />}
       </span>
       <span className="todo-item__name">{name}</span>
-      <span className="todo-item__delete" onClick={() => deleteTodo(id)}>
-        X
-      </span>
+      <Clear className="todo-item__delete" onClick={() => deleteTodo(id)} />
     </div>
   );
 };
