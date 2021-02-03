@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import TodoItem from "./TodoItem/TodoItem";
 import { v4 as uuidv4 } from "uuid";
 import TodoForm from "./TodoForm/TodoForm";
+import "./TodoList.css";
 
 const TodoList = ({ title }) => {
   const [todos, setTodos] = useState([
@@ -48,11 +49,11 @@ const TodoList = ({ title }) => {
   };
 
   return (
-    <React.Fragment>
+    <div className="todo-list">
       <h1>{title}</h1>
       <TodoForm addTodo={addTodo}></TodoForm>
       <div>{displayTodos()}</div>
-    </React.Fragment>
+    </div>
   );
 };
 
