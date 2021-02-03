@@ -2,10 +2,21 @@
   border: 1px solid black;
   border-radius: 10px;
   padding: 20px 50px;
-  margin: 10px;
+  margin: 30px;
+  position: relative;
 }
 
 .todo-list h1 {
   margin: 0;
   margin-bottom: 15px;
+}
+
+.todo-list__delete {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  background: #e0cfcc;
+  padding: 10px;
+  border-radius: 100%;
+  cursor: pointer;
 }
