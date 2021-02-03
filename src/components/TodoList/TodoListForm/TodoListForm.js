@@ -1,3 +1,4 @@
+import { TextField } from "@material-ui/core";
 import React, { useState } from "react";
 
 const TodoListForm = ({ addTodoList }) => {
@@ -14,17 +15,14 @@ const TodoListForm = ({ addTodoList }) => {
   };
 
   return (
-    <React.Fragment>
-      <form onSubmit={handleAdd}>
-        <input
-          aria-label="todolist-composer"
-          type="type"
-          value={title}
-          onChange={handleChange}
-        ></input>
-        <button onClick={handleAdd}>Add</button>
-      </form>
-    </React.Fragment>
+    <form onSubmit={handleAdd}>
+      <TextField
+        label="New TodoList"
+        value={title}
+        onChange={handleChange}
+        variant="outlined"
+      />
+    </form>
   );
 };
 

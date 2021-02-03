@@ -25,11 +25,11 @@ const TodoLists = () => {
 
   return (
     <div>
+      <TodoListForm addTodoList={addTodoList} />
+
       {todoLists.map((todoList) => (
         <TodoList title={todoList.title} key={todoList.id} />
       ))}
-
-      <TodoListForm addTodoList={addTodoList} />
     </div>
   );
 };
