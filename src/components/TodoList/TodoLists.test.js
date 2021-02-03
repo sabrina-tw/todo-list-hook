@@ -37,4 +37,16 @@ describe("TodoLists", () => {
       expect(todoLists.length).toEqual(1);
     });
   });
+
+  describe("deleteTodoList", () => {
+    it("should delete TodoList when clear icon is clicked", () => {
+      render(<TodoLists />);
+      const clearIcon = screen.getByTestId("delete-todo-list-btn");
+      fireEvent.click(clearIcon);
+
+      const todoLists = screen.queryAllByTestId("todo-list");
+
+      expect(todoLists.length).toEqual(0);
+    });
+  });
 });
