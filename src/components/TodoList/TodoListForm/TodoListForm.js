@@ -17,6 +17,7 @@ const TodoListForm = ({ addTodoList }) => {
   return (
     <form onSubmit={handleAdd} data-testid="todo-list-form">
       <TextField
+        inputProps={{ "aria-label": "todo-list-composer" }}
         label="New TodoList"
         value={title}
         onChange={handleChange}
