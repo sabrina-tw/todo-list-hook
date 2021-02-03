@@ -7,8 +7,12 @@ import { Delete } from "@material-ui/icons";
 
 const TodoList = ({ title, id, deleteTodoList }) => {
   const [todos, setTodos] = useState([
-    { id: uuidv4(), name: "buy milk", isDone: false },
     { id: uuidv4(), name: "do push ups", isDone: true },
+    {
+      id: uuidv4(),
+      name: "stop lying about having done push ups",
+      isDone: false,
+    },
   ]);
 
   const toggleDone = (id) => {
